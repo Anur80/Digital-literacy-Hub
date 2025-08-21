@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konexio Digital Literacy Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Konexio Digital Hub</span>
+                </div>
+            </div>
+            
+            <div class="nav-menu">
+                <div class="nav-item active" data-target="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="nav-item" data-target="lesson-plans">
+                    <i class="fas fa-book"></i>
+                    <span>Lesson Plans</span>
+                </div>
+                <div class="nav-item" data-target="presentations">
+                    <i class="fas fa-file-powerpoint"></i>
+                    <span>Presentations</span>
+                </div>
+                <div class="nav-item" data-target="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress Tracking</span>
+                </div>
+                <div class="nav-item" data-target="resources">
+                    <i class="fas fa-folder-open"></i>
+                    <span>Resources</span>
+                </div>
+                <div class="nav-item" data-target="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <h1 id="page-title">Dashboard</h1>
+                <div class="user-info">
+                    <div class="user-avatar">TA</div>
+                    <div>
+                        <div>Trainer Admin</div>
+                        <small>Konexio Africa</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dashboard View -->
+            <div id="dashboard-view">
+                <div class="dashboard">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Quick Stats</div>
+                        </div>
+                        <div class="stats-container">
+                            <div class="stat-card">
+                                <i class="fas fa-book orange"></i>
+                                <div class="stat-number">24</div>
+                                <div class="stat-label">Lessons</div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-users orange"></i>
+                                <div class="stat-number">42</div>
+                                <div class="stat-label">Learners</div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-check-circle orange"></i>
+                                <div class="stat-number">78%</div>
+                                <div class="stat-label">Completion</div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-chalkboard-teacher orange"></i>
+                                <div class="stat-number">5</div>
+                                <div class="stat-label">Trainers</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Recent Activities</div>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div><i class="fas fa-plus-circle orange"></i> New lesson added: "Internet Basics"</div>
+                                <small>Today, 10:30 AM</small>
+                            </div>
+                            <div class="activity-item mt-20">
+                                <div><i class="fas fa-check-circle orange"></i> Sarah completed "Email Essentials"</div>
+                                <small>Yesterday, 3:45 PM</small>
+                            </div>
+                            <div class="activity-item mt-20">
+                                <div><i class="fas fa-upload orange"></i> Presentation updated: "Intro to Word Processing"</div>
+                                <small>May 12, 2025</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-header mt-20">
+                    <h2>Featured Lessons</h2>
+                    <button class="btn" id="view-all-lessons">
+                        <i class="fas fa-book"></i> View All Lessons
+                    </button>
+                </div>
+                
+                <div class="lesson-list">
+                    <div class="lesson-card">
+                        <div class="lesson-image">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="lesson-content">
+                            <div class="lesson-title">Internet Basics</div>
+                            <div class="lesson-meta">
+                                <span><i class="fas fa-clock"></i> 45 min</span>
+                                <span><i class="fas fa-user"></i> Trainer John</span>
+                            </div>
+                            <p>Learn how to browse the internet safely and effectively.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                                <div class="progress-text">65% Complete</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-card">
+                        <div class="lesson-image">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="lesson-content">
+                            <div class="lesson-title">Email Essentials</div>
+                            <div class="lesson-meta">
+                                <span><i class="fas fa-clock"></i> 60 min</span>
+                                <span><i class="fas fa-user"></i> Trainer Amina</span>
+                            </div>
+                            <p>Master the skills of sending, receiving and managing emails.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                                <div class="progress-text">90% Complete</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-card">
+                        <div class="lesson-image">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <div class="lesson-content">
+                            <div class="lesson-title">Word Processing</div>
+                            <div class="lesson-meta">
+                                <span><i class="fas fa-clock"></i> 75 min</span>
+                                <span><i class="fas fa-user"></i> Trainer David</span>
+                            </div>
+                            <p>Create and format documents using word processing software.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 40%"></div>
+                                </div>
+                                <div class="progress-text">40% Complete</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lesson Plans View -->
+            <div id="lesson-plans-view" class="hidden">
+                <div class="section-header">
+                    <h2>Lesson Plans</h2>
+                    <button class="btn" id="create-lesson">
+                        <i class="fas fa-plus"></i> Create New Lesson
+                    </button>
+                </div>
+                
+                <div class="lesson-list">
+                    <div class="lesson-card">
+                        <div class="lesson-content">
+                            <div class="lesson-title">Internet Basics</div>
+                            <div class="lesson-meta">
+                                <span><i class="fas fa-clock"></i> 45 min</span>
+                                <span><i class="fas fa-user"></i> Trainer John</span>
+                            </div>
+                            <p><strong>Objective:</strong> Learners will be able to browse websites, use search engines, and understand basic internet safety.</p>
+                            <div class="lesson-actions mt-20">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="btn">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-card">
+                        <div class="lesson-content">
+                            <div class="lesson-title">Email Essentials</div>
+                            <div class="lesson-meta">
+                                <span><i class="fas fa-clock"></i> 60 min</span>
+                                <span><i class="fas fa-user"></i> Trainer Amina</span>
+                            </div>
+                            <p><strong>Objective:</strong> Learners will create email accounts, send/receive messages, and manage attachments.</p>
+                            <div class="lesson-actions mt-20">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="btn">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-card">
+                        <div class="lesson-content">
+                            <div class="lesson-title">Word Processing</div>
+                            <div class="lesson-meta">
+                                <span><i class="fas fa-clock"></i> 75 min</span>
+                                <span><i class="fas fa-user"></i> Trainer David</span>
+                            </div>
+                            <p><strong>Objective:</strong> Learners will create, format, and save documents using basic word processing features.</p>
+                            <div class="lesson-actions mt-20">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="btn">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-container mt-20 hidden" id="lesson-form">
+                    <h2 class="form-title">Create New Lesson Plan</h2>
+                    <form id="lesson-plan-form">
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="form-label" for="lesson-title">Lesson Title</label>
+                                    <input type="text" class="form-input" id="lesson-title" placeholder="Enter lesson title">
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="form-label" for="lesson-duration">Duration (minutes)</label>
+                                    <input type="number" class="form-input" id="lesson-duration" placeholder="60">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="lesson-objective">Learning Objective</label>
+                            <textarea class="form-textarea" id="lesson-objective" placeholder="What will learners achieve?"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="lesson-description">Description</label>
+                            <textarea class="form-textarea" id="lesson-description" placeholder="Detailed lesson description"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="lesson-materials">Materials Needed</label>
+                            <textarea class="form-textarea" id="lesson-materials" placeholder="List required materials"></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" id="cancel-lesson">
+                                Cancel
+                            </button>
+                            <button type="submit" class="btn">
+                                Save Lesson Plan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Presentations View -->
+            <div id="presentations-view" class="hidden">
+                <div class="section-header">
+                    <h2>Presentations</h2>
+                    <button class="btn" id="upload-presentation">
+                        <i class="fas fa-upload"></i> Upload Presentation
+                    </button>
+                </div>
+                
+                <div class="presentation-container">
+                    <div class="presentation-header">
+                        <h3>Internet Basics</h3>
+                        <div>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="presentation-viewer">
+                        <i class="fas fa-file-powerpoint"></i>
+                        <h3>Internet Basics Presentation</h3>
+                        <p>Slides: 24 | Last updated: May 10, 2025</p>
+                    </div>
+                    
+                    <div class="presentation-actions">
+                        <button class="btn">
+                            <i class="fas fa-play"></i> Start Presentation
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-share-alt"></i> Share with Learners
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="lesson-list mt-20">
+                    <div class="lesson-card">
+                        <div class="lesson-content">
+                            <div class="lesson-title">Email Essentials Presentation</div>
+                            <div class="lesson-meta">
+                                <span><i class="fas fa-file"></i> PDF, 3.2 MB</span>
+                                <span><i class="fas fa-clock"></i> Updated: May 5, 2025</span>
+                            </div>
+                            <p>Presentation covering email setup, sending, receiving, and attachments.</p>
+                            <div class="lesson-actions mt-20">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="btn">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-card">
+                        <div class="lesson-content">
+                            <div class="lesson-title">Word Processing Presentation</div>
+                            <div class="lesson-meta">
+                                <span><i class="fas fa-file"></i> PDF, 4.1 MB</span>
+                                <span><i class="fas fa-clock"></i> Updated: May 1, 2025</span>
+                            </div>
+                            <p>Guide to creating and formatting documents in word processors.</p>
+                            <div class="lesson-actions mt-20">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="btn">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Progress Tracking View -->
+            <div id="progress-view" class="hidden">
+                <div class="section-header">
+                    <h2>Learner Progress</h2>
+                    <button class="btn">
+                        <i class="fas fa-download"></i> Export Report
+                    </button>
+                </div>
+                
+                <div class="card mt-20">
+                    <div class="card-header">
+                        <div class="card-title">Overall Completion</div>
+                    </div>
+                    <div class="progress-container" style="padding: 20px;">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 78%"></div>
+                        </div>
+                        <div class="progress-text">78% of all lessons completed</div>
+                    </div>
+                </div>
+                
+                <div class="card mt-20">
+                    <div class="card-header">
+                        <div class="card-title">Learner Progress</div>
+                    </div>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background-color: var(--light-gray);">
+                                <th style="padding: 12px; text-align: left;">Learner</th>
+                                <th style="padding: 12px; text-align: left;">Completed</th>
+                                <th style="padding: 12px; text-align: left;">In Progress</th>
+                                <th style="padding: 12px; text-align: left;">Not Started</th>
+                                <th style="padding: 12px; text-align: left;">Overall</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--medium-gray);">
+                                <td style="padding: 12px;">Sarah Johnson</td>
+                                <td style="padding: 12px;">8</td>
+                                <td style="padding: 12px;">2</td>
+                                <td style="padding: 12px;">0</td>
+                                <td style="padding: 12px; font-weight: bold; color: var(--konexio-orange);">100%</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--medium-gray);">
+                                <td style="padding: 12px;">Michael Brown</td>
+                                <td style="padding: 12px;">6</td>
+                                <td style="padding: 12px;">3</td>
+                                <td style="padding: 12px;">1</td>
+                                <td style="padding: 12px; font-weight: bold; color: var(--konexio-orange);">90%</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--medium-gray);">
+                                <td style="padding: 12px;">Amina Diallo</td>
+                                <td style="padding: 12px;">7</td>
+                                <td style="padding: 12px;">1</td>
+                                <td style="padding: 12px;">2</td>
+                                <td style="padding: 12px; font-weight: bold; color: var(--konexio-orange);">80%</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--medium-gray);">
+                                <td style="padding: 12px;">David Smith</td>
+                                <td style="padding: 12px;">5</td>
+                                <td style="padding: 12px;">2</td>
+                                <td style="padding: 12px;">3</td>
+                                <td style="padding: 12px; font-weight: bold; color: var(--konexio-orange);">70%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Resources View -->
+            <div id="resources-view" class="hidden">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Resource Library</div>
+                        <button class="btn">
+                            <i class="fas fa-plus"></i> Add Resource
+                        </button>
+                    </div>
+                    
+                    <div class="resources-grid">
+                        <!-- Resource 1 -->
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="resource-title">Digital Literacy Handbook</div>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-file"></i> PDF, 2.4 MB</span>
+                                <span><i class="fas fa-user"></i> Admin</span>
+                            </div>
+                            <p>Comprehensive guide covering basic digital skills for beginners.</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                                <button class="btn btn-sm">
+                                    <i class="fas fa-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Resource 2 -->
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <div class="resource-title">Email Writing Template</div>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-file"></i> DOCX, 0.8 MB</span>
+                                <span><i class="fas fa-user"></i> Trainer John</span>
+                            </div>
+                            <p>Template for professional email writing with examples.</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                                <button class="btn btn-sm">
+                                    <i class="fas fa-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Resource 3 -->
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <div class="resource-title">Student Progress Tracker</div>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-file"></i> XLSX, 1.2 MB</span>
+                                <span><i class="fas fa-user"></i> Trainer Amina</span>
+                            </div>
+                            <p>Excel template to track student progress and attendance.</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                                <button class="btn btn-sm">
+                                    <i class="fas fa-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Resource 4 -->
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="resource-title">Lesson Plan Template</div>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-file"></i> DOCX, 0.5 MB</span>
+                                <span><i class="fas fa-user"></i> Admin</span>
+                            </div>
+                            <p>Standard template for creating structured lesson plans.</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                                <button class="btn btn-sm">
+                                    <i class="fas fa-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Resource 5 -->
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-file-image"></i>
+                            </div>
+                            <div class="resource-title">Digital Safety Infographic</div>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-file"></i> PNG, 1.8 MB</span>
+                                <span><i class="fas fa-user"></i> Trainer David</span>
+                            </div>
+                            <p>Visual guide to online safety practices and precautions.</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                                <button class="btn btn-sm">
+                                    <i class="fas fa-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Resource 6 -->
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-file-video"></i>
+                            </div>
+                            <div class="resource-title">Basic Computer Skills Video</div>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-file"></i> MP4, 24.5 MB</span>
+                                <span><i class="fas fa-user"></i> Admin</span>
+                            </div>
+                            <p>Instructional video covering basic computer operations.</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                                <button class="btn btn-sm">
+                                    <i class="fas fa-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Resource Categories</div>
+                        <button class="btn">
+                            <i class="fas fa-plus"></i> Add Category
+                        </button>
+                    </div>
+                    
+                    <div class="categories-grid">
+                        <div class="category-card document">
+                            <div class="category-header">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Documents</span>
+                            </div>
+                            <div class="file-count">24 files</div>
+                        </div>
+                        
+                        <div class="category-card image">
+                            <div class="category-header">
+                                <i class="fas fa-file-image"></i>
+                                <span>Images</span>
+                            </div>
+                            <div class="file-count">18 files</div>
+                        </div>
+                        
+                        <div class="category-card video">
+                            <div class="category-header">
+                                <i class="fas fa-file-video"></i>
+                                <span>Videos</span>
+                            </div>
+                            <div class="file-count">12 files</div>
+                        </div>
+                        
+                        <div class="category-card audio">
+                            <div class="category-header">
+                                <i class="fas fa-file-audio"></i>
+                                <span>Audio</span>
+                            </div>
+                            <div class="file-count">8 files</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Settings View -->
+            <div id="settings-view" class="hidden">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Platform Settings</div>
+                    </div>
+                    
+                    <div class="settings-grid">
+                        <!-- Account Settings -->
+                        <div class="setting-card">
+                            <div class="setting-header">
+                                <div class="setting-icon">
+                                    <i class="fas fa-user-cog"></i>
+                                </div>
+                                <h2 class="setting-title">Account Settings</h2>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="user-name">Full Name</label>
+                                <input type="text" class="form-input" id="user-name" value="Trainer Admin">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="user-email">Email Address</label>
+                                <input type="email" class="form-input" id="user-email" value="trainer@konexio.africa">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="user-role">Role</label>
+                                <select class="form-select" id="user-role">
+                                    <option selected>Trainer</option>
+                                    <option>Administrator</option>
+                                    <option>Support Staff</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="user-location">Location</label>
+                                <select class="form-select" id="user-location">
+                                    <option selected>Nairobi, Kenya</option>
+                                    <option>Kampala, Uganda</option>
+                                    <option>Dakar, Senegal</option>
+                                    <option>Lagos, Nigeria</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline">
+                                    Cancel
+                                </button>
+                                <button type="button" class="btn">
+                                    Save Changes
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Platform Preferences -->
+                        <div class="setting-card">
+                            <div class="setting-header">
+                                <div class="setting-icon">
+                                    <i class="fas fa-sliders-h"></i>
+                                </div>
+                                <h2 class="setting-title">Platform Preferences</h2>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="platform-language">Language</label>
+                                <select class="form-select" id="platform-language">
+                                    <option selected>English</option>
+                                    <option>French</option>
+                                    <option>Swahili</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Notification Preferences</label>
+                                
+                                <div class="toggle-container">
+                                    <span class="toggle-label">Email Notifications</span>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="toggle-container">
+                                    <span class="toggle-label">In-App Notifications</span>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="toggle-container">
+                                    <span class="toggle-label">Progress Updates</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="toggle-container">
+                                    <span class="toggle-label">New Resource Alerts</span>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Display Preferences</label>
+                                
+                                <div class="toggle-container">
+                                    <span class="toggle-label">Dark Mode</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="toggle-container">
+                                    <span class="toggle-label">High Contrast Mode</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="toggle-container">
+                                    <span class="toggle-label">Large Text</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Security -->
+                        <div class="setting-card">
+                            <div class="setting-header">
+                                <div class="setting-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h2 class="setting-title">Security Settings</h2>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <div class="password-container">
+                                    <span>••••••••</span>
+                                    <button class="btn btn-outline btn-sm">
+                                        Change Password
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Two-Factor Authentication</label>
+                                <div class="auth-container">
+                                    <span>Currently disabled</span>
+                                    <button class="btn btn-outline btn-sm">
+                                        Enable 2FA
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Active Sessions</label>
+                                <div class="sessions-container">
+                                    <div class="session-item">
+                                        <div>
+                                            <div>Chrome on Windows</div>
+                                            <small>Nairobi, Kenya • Active now</small>
+                                        </div>
+                                        <button class="btn btn-outline btn-sm">
+                                            Logout
+                                        </button>
+                                    </div>
+                                    <div class="session-item">
+                                        <div>
+                                            <div>Safari on iPhone</div>
+                                            <small>Kampala, Uganda • 2 days ago</small>
+                                        </div>
+                                        <button class="btn btn-outline btn-sm">
+                                            Logout
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Platform Information -->
+                        <div class="setting-card">
+                            <div class="setting-header">
+                                <div class="setting-icon">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <h2 class="setting-title">Platform Information</h2>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="info-item">
+                                    <strong>Version:</strong> 1.2.4
+                                </div>
+                                <div class="info-item">
+                                    <strong>Last Updated:</strong> August 1, 2025
+                                </div>
+                                <div class="info-item">
+                                    <strong>License:</strong> Konexio Africa Education License
+                                </div>
+                                <div class="info-item">
+                                    <strong>Support Contact:</strong> support@konexio.africa
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-sync-alt"></i> Check for Updates
+                                </button>
+                                <button class="btn">
+                                    <i class="fas fa-question-circle"></i> Help Center
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
